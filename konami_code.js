@@ -7,15 +7,16 @@ function init() {
   document.body.addEventListener('keydown', (event) => {
     console.log(event.which);
 
-    let input = parseInt(event.which);
+    let input = parseInt(event.which || e.detail);
     if (input == code[index]) {
       console.log(index);
-      if (index  == code.length) {
-        index = 0;
-        return alert("Hurray!");
-
-      }
       index ++;
+      if (index  == code.length) {
+
+        alert("Hurray!");
+        index = 0;
+      }
+    
 
     } else {
       index = 0;
