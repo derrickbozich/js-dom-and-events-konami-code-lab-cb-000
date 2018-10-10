@@ -10,7 +10,7 @@ function init() {
     let input = parseInt(event.which);
     if (input == code[index]) {
       console.log(index);
-      if (index + 1 == code.length) {
+      if (index  == code.length) {
         index = 0;
         return alert("Hurray!");
 
